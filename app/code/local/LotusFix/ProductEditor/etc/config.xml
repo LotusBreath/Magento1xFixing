@@ -1,0 +1,37 @@
+<config>
+    <modules>
+        <LotusFix_ProductEditor>
+            <version>1.0.0</version>
+        </LotusFix_ProductEditor>
+    </modules>
+    <global>
+        <models>
+            <lotusfix_producteditor>
+                <class>LotusFix_ProductEditor_Model</class>
+            </lotusfix_producteditor>
+        </models>
+        <blocks>
+            <adminhtml>
+                <rewrite>
+                    <catalog_helper_form_wysiwyg_content>LotusFix_ProductEditor_Block_Adminhtml_Catalog_Helper_Form_Wysiwyg_Content</catalog_helper_form_wysiwyg_content>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+        <helpers>
+            <lotusfix_producteditor>
+                <class>LotusFix_ProductEditor_Helper</class>
+            </lotusfix_producteditor>
+        </helpers>
+        <events>
+            <controller_front_init_before>
+                <observers>
+                    <lotusfix_producteditor_handler>
+                        <type>singleton</type>
+                        <class>lotusfix_producteditor/observer</class>
+                        <method>addEditorHandler</method>
+                    </lotusfix_producteditor_handler>
+                </observers>
+            </controller_front_init_before>
+        </events>
+    </global>
+</config>

@@ -1,0 +1,9 @@
+<config>
+    <modules>
+        <LotusFix_ProductEditor>
+            <codePool>local</codePool>
+            <active>true</active>
+        </LotusFix_ProductEditor>
+    </modules>
+
+</config>
